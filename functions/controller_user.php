@@ -1,19 +1,5 @@
 <?php
 
-function register_user($nama, $pass)
-{
-    global $link;
-    // mencegah sql injection
-    $nama = mysqli_real_escape_string($link, $nama);
-    $pass = mysqli_real_escape_string($link, $pass);
-    // Encrypt password
-    $pass = password_hash($pass, PASSWORD_DEFAULT);
-    $query = "INSERT INTO users(username, password) VALUES('$nama', '$pass')";
-
-    if (mysqli_query($link, $query)) return true;
-    else return false;
-}
-
 function input_relawan($nama, $alamat, $email, $nohp, $keahlian, $daerah)
 {
     global $link;
@@ -57,21 +43,6 @@ function hapus($id)
     $query = "DELETE from data_relawan WHERE id='$id'";
     if (mysqli_query($link, $query)) return true;
     else return false;
-}
-
-// cegah duplikasi username
-function register_cek_username($nama)
-{
-    global $link;
-    // mencegah sql injection
-    $nama = mysqli_real_escape_string($link, $nama);
-
-    $query = "SELECT * FROM users where username = '$nama'";
-
-    if ($result = mysqli_query($link, $query)) {
-        if (mysqli_num_rows($result) == 0) return true;
-        else return false;
-    }
 }
 
 // cek nama terdaftar / belum

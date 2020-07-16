@@ -13,13 +13,20 @@ include("views/header.php");
     </div>
     <br>
     <br>
-    <br><center><h1>Selamat Datang di Website Data Relawan Covid 19</h1><br>
-            <h2>kelompok 2</h2><br>
-            <h3>1. Budi Sutanto </h3>
-            <h3>2. Arisman Laia </h3>
-            <h3>3. Billy Ruanda</h3>
-            <h3>4. Chairul Mudjahid</h3>
-        	<h3>5. Asmarudin <h3></center>
+    <br>
+    <br>
+    <br>
+    <h4 class="text-center">Silahkan Login</h4>
+                <form style="width: 300px; margin-left:600px;  " action="index.php" method="POST"> 
+                        <label>Username
+                        <input type="text" name="username" placeholder="Username">
+                        </label>
+                        <label>Password
+                        <input type="password" name="password" placeholder="Password">
+                        </label>
+                        <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
+                        <p><input type="submit" name="submit" class="button expanded" value="MASUK"/></p>  
+                </form>
 <?php
 include("views/footer.php");
 ?>

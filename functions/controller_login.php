@@ -16,11 +16,11 @@ if(isset($_POST['submit']) ){
                 header('Location: home.php');
             }
             else{
-                echo "<script>alert('Data ada yang salah')</script>";
+                echo "<script>alert('Username/Password salah')</script>";
             }
         }
         else{
-            echo "<script>alert('Nama belum terdaftar di database')</script>";
+            echo "<script>alert('Username tidak terdaftar')</script>";
         }
     }
     else{
