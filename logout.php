@@ -6,4 +6,4 @@ $session = $_SESSION['username'];
 // function logout
 logout($session);
 
-header('Location: login.php');
+header('Location: index.php');

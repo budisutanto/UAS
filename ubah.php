@@ -11,13 +11,15 @@ $result2 = mysqli_query($link, $query2);
 include("functions/controller_edit.php");
 
 ?>
-<h3>Ubah Data Relawan</h3>
 <?php
 
 while ($data = mysqli_fetch_array($result2)) {
 
 ?>
-    <form action="" method="post" style="margin:50px">
+<br>
+<br>
+<h3><center>Ubah Data Relawan</h3></center>
+    <form action="" method="post" style="margin-top:50px; margin-left:400px;">
         <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
         <div class="row">
             <div class="col-sm-8">
@@ -57,7 +59,7 @@ while ($data = mysqli_fetch_array($result2)) {
             </div>
 
             <div class="col-sm-12 mt-3">
-                <a href="" class="btn btn-sm btn-success">Back</a>
+                <a href="update.php" class="btn btn-sm btn-success">Back</a>
                 <button type="submit" name="submit" class="btn btn-sm btn-primary">Submit</button>
             </div>
         </div>

@@ -49,7 +49,7 @@ $result = mysqli_query($link, $query);
         </div>
 
         <div class="col-sm-12 mt-3">
-            <a href="" class="btn btn-sm btn-success">Back</a>
+            <a href="home.php" class="btn btn-sm btn-success">Back</a>
             <button type="submit" name="submit" class="btn btn-sm btn-primary">Submit</button>
         </div>
     </div>

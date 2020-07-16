@@ -13,7 +13,7 @@ if(isset($_POST['submit']) ){
         if( login_cek_nama($nama) ){
             if( cek_data($nama, $pass) ){
                 $_SESSION['username'] = $nama;
-                header('Location: index.php');
+                header('Location: home.php');
             }
             else{
                 echo "<script>alert('Data ada yang salah')</script>";
